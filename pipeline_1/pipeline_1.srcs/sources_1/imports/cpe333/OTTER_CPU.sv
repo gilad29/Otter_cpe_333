@@ -92,10 +92,12 @@ module OTTER_MCU(input CLK,
     //Creates 4-to-1 multiplexor used to select reg write back data
     Mult4to1 regWriteback (next_pc,csr_reg,mem_data,aluResult,wb_sel,rfIn);
     
+    
     /***********Create pipeline registers**********/
     //Creates fetch to decode pipeline register
     wire [31:0] IR_id, next_pc_id;
     if_id pipe_reg (CLK, IR, next_pc, IR_id, next_pc_id); 
+    
   
     /***********End pipeline registers**********/
   
