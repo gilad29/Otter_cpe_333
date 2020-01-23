@@ -3,3 +3,7 @@ pipeline_1/pipeline_1.hw/*
 pipeline_1/pipeline_1.ip_user_files/*
 pipeline_1/pipeline_1.runs/*
 pipeline_1/pipeline_1.sims/*
+pipeline_1/.xil/
+pipeline_1/vivado.jou
+pipeline_1/vivado.log
+pipeline_1/vivado_pid5360.str

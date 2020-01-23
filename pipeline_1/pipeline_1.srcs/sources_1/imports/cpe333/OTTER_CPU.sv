@@ -87,10 +87,10 @@ module OTTER_MCU(input CLK,
     OTTER_ALU ALU (alu_fun, aluAin, aluBin, aluResult); // the ALU
     
     // Creates a RISC-V register file
-    OTTER_registerFile RF (IR[19:15], IR[24:20], IR[11:7], rfIn, regWrite, A, B, CLK); // Register file
+    OTTER_registerFile RF (IR_id[19:15], IR_id[24:20], IR_id[11:7], rfIn, regWrite, A, B, CLK); // Register file
  
     //Creates 4-to-1 multiplexor used to select reg write back data
-    Mult4to1 regWriteback (next_pc,csr_reg,mem_data,aluResult,wb_sel,rfIn);
+    Mult4to1 regWriteback (next_pc_id,csr_reg,mem_data,aluResult,wb_sel,rfIn);
     
     
     /***********Create pipeline registers**********/
